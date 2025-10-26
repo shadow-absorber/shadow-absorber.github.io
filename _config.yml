@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Shadow Absorber"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/shadow.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "shadow is a cheese loving person that loves to mess with security and privacy"
   location         : "Sweden"
   email            :
