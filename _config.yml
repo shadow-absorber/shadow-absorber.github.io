@@ -137,14 +137,17 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url:  "https://github.com/shadow-absorber"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
+      url: "https://gitlab.com/shadow-absorber"
+    - label: "Codeberg"
+      icon: "fab fa-fw fa-git-alt"
+      url: "https://codeberg.org/shadow-absorber"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
-      # url:
-  since: "2013"
+      url: "https://tech.lgbt/@shadowabsorber"
+  since: "2025"
 
 
 # Reading Files
@@ -310,3 +313,10 @@ defaults:
       comments: # true
       share: false
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
