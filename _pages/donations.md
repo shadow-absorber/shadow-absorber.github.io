@@ -4,6 +4,14 @@ permalink: /donations/
 author_profile: true
 ---
 
+# Fiat Donations:
+**PREFERED METHOD**
+buymeacoffee: [https://buymeacoffee.com/shadowabsorber](https://buymeacoffee.com/shadowabsorber)
+
+alternatives:
+Patreon: [https://patreon.com/shadow_absorber](https://patreon.com/shadow_absorber)
+Ko-Fi: [https://ko-fi.com/shadowabsorber](https://ko-fi.com/shadowabsorber)
+
 # Crypto Donations:
 
 BTC/Bitcoin:
