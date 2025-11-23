@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 # Fiat Donations:
-**PREFERED METHOD**
+**PREFERRED METHOD**
 
 buymeacoffee: [https://buymeacoffee.com/shadowabsorber](https://buymeacoffee.com/shadowabsorber)
 
@@ -37,7 +37,7 @@ LTC/Litecoin:
 ltc1q9wcj0k9s809dn6n4h6t0zkx8tgujnv3esl54wd
 ```
 
-XMR/Monero **PREFERED METHOD** :
+XMR/Monero **PREFERRED METHOD** :
 ```
 858jbEYvqU1VeszNgNGWvuBWX2WW4LbvA1eZJjH46duUFu7PZ5SGi4rbdJsddU5emVM6TsKzkZ1Sp5mvFt57j78NHEnqkmV
 ```
