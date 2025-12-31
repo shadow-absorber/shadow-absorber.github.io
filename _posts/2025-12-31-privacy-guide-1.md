@@ -1,6 +1,6 @@
 ---
 title: "Digital minimalism: Remove Accounts"
-date:  2025-12-31T10:49:21UTC
+date:  2025-12-31T10:39:21UTC
 categories:
   - Privacy
   - Security
