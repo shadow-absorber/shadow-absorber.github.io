@@ -39,6 +39,7 @@ To contact shadow use one of the following:
 * Mastodon: [https://tech.lgbt/@shadowabsorber](https://tech.lgbt/@shadowabsorber)
 * Email: contact-websited8a59 shadowabsorber com
 
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEaWqgHRYJKwYBBAHaRw8BAQdAOracfMbQbuGbKsBMN6CqecW9V6oKQ53kQ8Oh
@@ -53,5 +54,5 @@ YlWIUOOv7qz/8yTQRGDw6sFykdIBAMHWVXlXq90hr9QQRPZQXdokLd0f3qwRHTq/
 tR3caDwF
 =WlGM
 -----END PGP PUBLIC KEY BLOCK-----
-
+```
 If the email starts getting abused it will be changed out so check back here sometimes
