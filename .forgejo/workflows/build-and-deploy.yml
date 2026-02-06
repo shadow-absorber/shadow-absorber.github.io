@@ -18,7 +18,7 @@ on:
 
 jobs:
   build:
-    runs-on: codeberg-tiny-lazy
+    runs-on: codeberg-small-lazy
     steps:
       - name: Clone the repository
         uses: https://code.forgejo.org/actions/checkout@v4
