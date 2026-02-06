@@ -1,0 +1,71 @@
+name: Deploy Jekyll site to Pages
+
+# This is based on https://gohugo.io/host-and-deploy/host-on-codeberg-pages/#automated-deployment-using-forgejo-actions
+# This action works by:
+# - Installing deps
+# - Calling jekyll build
+# - Uploading the _site files as an artifact
+# - Downloading the _site files
+# - Pushing the _site files into the `pages` branch
+
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: codeberg-tiny-lazy
+    steps:
+      - name: Clone the repository
+        uses: https://code.forgejo.org/actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Ruby
+        run: apt-get update && apt-get install -y ruby ruby-dev
+
+      - name: Install bundler
+        run: gem install bundler
+
+      - name: Generate static files w/ Jekyll
+        run: |
+          bundle install
+          bundle exec jekyll build -s . -d _site/
+          cp .domains _site/
+
+      - name: Upload generated files
+        uses: https://code.forgejo.org/actions/upload-artifact@v3
+        with:
+          name: Generated files
+          path: _site/
+          include-hidden-files: true # for .domains
+
+  deploy:
+    needs: [ build ]
+    runs-on: codeberg-tiny-lazy
+    steps:
+      - name: Clone the repository
+        uses: https://code.forgejo.org/actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Checkout the target branch and clean it up
+        run: |
+          git checkout pages || git switch --orphan pages && \
+          rm -Rfv $(ls -A | egrep -v '^(\.git|LICENSE)$')
+      - name: Download generated files
+        uses: https://code.forgejo.org/actions/download-artifact@v3
+        with:
+          name: Generated files
+      - name: Publish the website
+        run: |
+          git config user.email codeberg-ci && \
+          git config user.name "Codeberg CI" && \
+          git add . && \
+          git commit --allow-empty --message "Codeberg build for ${GITHUB_SHA}" && \
+          git push origin pages
